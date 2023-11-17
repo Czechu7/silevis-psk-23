@@ -21,6 +21,8 @@ import { AuthModule } from './auth/auth.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    CoreModule,
+    AuthModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -31,11 +33,7 @@ import { AuthModule } from './auth/auth.module';
     FormsModule,
     StudentModule,
   ],
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, AuthModule],
   providers: [],
   bootstrap: [AppComponent],
-  bootstrap: [AppComponent],
 })
-export class AppModule {}
 export class AppModule {}
