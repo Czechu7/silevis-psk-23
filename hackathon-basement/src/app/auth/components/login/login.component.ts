@@ -1,6 +1,8 @@
+import { User } from './../../../core/models/user.model';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/core/services/auth.service';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,9 @@ import { AuthService } from 'src/app/core/services/auth.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  constructor(private authService: AuthService) {}
+  loggedUser: User;
+
+  constructor(private authService: AuthService, private router: Router) {}
 
   form = new FormGroup({
     email: new FormControl('', {
@@ -26,7 +30,7 @@ export class LoginComponent {
     return this.form.controls;
   }
 
-  getErrorMessage(control: FormControl) {
+  protected getErrorMessage(control: FormControl) {
     if (control.hasError('required')) {
       return 'Musisz wpisać jakąś wartość.';
     }
@@ -42,14 +46,7 @@ export class LoginComponent {
     return control.hasError('email') ? 'Nieprawidłowy adres e-mail' : '';
   }
 
-  handleLogin() {
-    this.authService.login(this.form.getRawValue().email).subscribe({
-      next: (value) => {
-        console.log(value);
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
+  protected handleLogin() {
+    this.authService.login(this.form.getRawValue().email);
   }
 }
