@@ -1,4 +1,4 @@
-import { User } from './../../../core/models/user.model';
+import { IUser } from '../../../shared/interfaces/IUser.model';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/auth/services/auth.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  loggedUser: User;
+  loggedUser: IUser;
 
   constructor(private authService: AuthService, private router: Router) {}
 

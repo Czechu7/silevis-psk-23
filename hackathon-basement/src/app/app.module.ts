@@ -7,7 +7,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FormsModule } from '@angular/forms';
 import { StudentModule } from './student/student.module';
-import { PdfCreatorComponent } from './tests/pdf-creator/pdf-creator.component';
+import { PdfCreatorComponent } from './student/components/pdf-creator/pdf-creator.component';
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './auth/auth.module';
 
