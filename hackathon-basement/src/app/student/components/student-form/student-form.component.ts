@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { StudentFormService } from '../../service/student-form.service';
 
 @Component({
   selector: 'app-student-form',
@@ -10,7 +11,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class StudentFormComponent implements OnInit {
   studentForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
+    private studentFormService: StudentFormService
+  ) {}
 
   ngOnInit(): void {
     this.http
@@ -31,6 +36,6 @@ export class StudentFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.studentForm.value);
+    this.studentFormService.handleSubmit(this.studentForm.value);
   }
 }

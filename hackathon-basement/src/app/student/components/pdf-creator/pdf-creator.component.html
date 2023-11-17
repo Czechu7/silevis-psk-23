@@ -1,0 +1,32 @@
+<div>
+  <label for="dataUmowy">Data umowy:</label>
+  <input id="dataUmowy" type="text" [(ngModel)]="formData['data_umowy']" />
+  <input
+    id="nazwaDziekan"
+    type="text"
+    [(ngModel)]="formData['nazwa_dziekan']"
+  />
+  <input id="nazwaFirmy" type="text" [(ngModel)]="formData['nazwa_firmy']" />
+  <input
+    id="siedzibaFirmy"
+    type="text"
+    [(ngModel)]="formData['siedziba_firmy']"
+  />
+  <input id="firmakrs" type="text" [(ngModel)]="formData['firma_krs']" />
+  <input id="firmanip" type="text" [(ngModel)]="formData['firma_nip']" />
+  <input id="firmaregon" type="text" [(ngModel)]="formData['firma_regon']" />
+  <input id="firmareprez" type="text" [(ngModel)]="formData['firma_reprez']" />
+  <input
+    id="nazwastudenta"
+    type="text"
+    [(ngModel)]="formData['nazwa_studenta']"
+  />
+  <input
+    id="ulnumerindeksuicaFirmy"
+    type="text"
+    [(ngModel)]="formData['numer_indeksu']"
+  />
+  <input id="dataod" type="text" [(ngModel)]="formData['data_od']" />
+  <input id="datado" type="text" [(ngModel)]="formData['data_do']" />
+  <button (click)="generatePdf()">Generuj PDF</button>
+</div>
