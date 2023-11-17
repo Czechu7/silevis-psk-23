@@ -1,0 +1,24 @@
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input{
+    font-family:sans-serif;
+    margin: 1px;
+    text-align: center;
+    width: 20rem; 
+    height: 2rem; 
+    background: #ffffff; 
+    border-radius: 0px;
+}
+button{
+    font-style: italic;
+    background-color: white;
+    
+    margin-top: 2rem;
+    width: 10%;
+
+    height: 5%;
+}
