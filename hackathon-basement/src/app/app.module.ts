@@ -10,6 +10,7 @@ import { StudentModule } from './student/student.module';
 import { PdfCreatorComponent } from './tests/pdf-creator/pdf-creator.component';
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './auth/auth.module';
+import { HomeModule } from './home/home.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -32,6 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     FormsModule,
     StudentModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
