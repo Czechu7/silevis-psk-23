@@ -12,8 +12,6 @@ import { StudentModule } from './student/student.module';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
-import { CoreModule } from './core/core.module';
-import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,11 +29,9 @@ import { AuthModule } from './auth/auth.module';
     FormsModule,
     StudentModule,
   ],
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, AuthModule],
+
   providers: [],
-  bootstrap: [AppComponent],
+
   bootstrap: [AppComponent],
 })
-export class AppModule {}
 export class AppModule {}
