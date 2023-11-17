@@ -1,0 +1,6 @@
+{
+  "/hackathon23-mockapi-env.eba-qfrnjqkt.eu-central-1.elasticbeanstalk.com/": {
+    "target": "http://localhost:4200",
+    "secure": false
+  }
+}

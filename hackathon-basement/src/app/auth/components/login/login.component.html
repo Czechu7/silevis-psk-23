@@ -1,0 +1,18 @@
+<div class="login">
+  <h1 class="login__title">Zaloguj się</h1>
+  <form [formGroup]="form" action="" class="login__form" (ngSubmit)="handleLogin()">
+    <div class="login__input">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">
+          <i class="pi pi-user"></i>
+        </span>
+        <input pInputText placeholder="Username" formControlName="email" />
+      </div>
+    </div>
+    <p *ngIf="controls.email.invalid && (controls.email.dirty || controls.email.touched)">
+      {{getErrorMessage(controls.email)}}</p>
+
+    <p-button class="login__button" [disabled]="form.invalid" type="submit" label="Submit"></p-button>
+
+  </form>
+</div>
