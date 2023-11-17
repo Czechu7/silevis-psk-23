@@ -1,6 +1,12 @@
 {
   "HOME": {
     "TITLE": "Hello Angular with ngx-translate!",
-    "SELECT": "Change language"
+    "SELECT": "Change language",
+    "HOME.TITLE": "Home",
+    "HOME.SELECT": "Select language",
+    "HEADER.LOGIN": "Login",
+    "HEADER.STUDENT": "Student",
+    "HEADER.TESTS": "Tests",
+    "HEADER.LOGOUT": "Logout"
   }
 }
