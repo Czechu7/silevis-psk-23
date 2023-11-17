@@ -1,6 +1,12 @@
 {
   "HOME": {
     "TITLE": "Siema",
-    "SELECT": "test"
+    "SELECT": "test",
+    "HOME.TITLE": "Strona główna",
+    "HOME.SELECT": "Wybierz język",
+    "HEADER.LOGIN": "Zaloguj",
+    "HEADER.STUDENT": "Student",
+    "HEADER.TESTS": "Testy",
+    "HEADER.LOGOUT": "Wyloguj"
   }
 }
