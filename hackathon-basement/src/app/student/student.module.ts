@@ -6,6 +6,7 @@ import { StudentFormComponent } from './student-form/student-form.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentRoutingModule } from './admin-routing.module';
 
 @NgModule({
   declarations: [StudentFormComponent],
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     InputTextModule,
     ButtonModule,
     HttpClientModule,
+    StudentRoutingModule,
   ],
   exports: [StudentFormComponent],
 })
