@@ -7,9 +7,11 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentRoutingModule } from './admin-routing.module';
+import { ChangeDateComponent } from './change-date/change-date.component';
+import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
 
 @NgModule({
-  declarations: [StudentFormComponent],
+  declarations: [StudentFormComponent, ChangeDateComponent],
   imports: [
     CommonModule,
     BrowserModule,
@@ -19,6 +21,7 @@ import { StudentRoutingModule } from './admin-routing.module';
     ButtonModule,
     HttpClientModule,
     StudentRoutingModule,
+    TriStateCheckboxModule,
   ],
   exports: [StudentFormComponent],
 })
