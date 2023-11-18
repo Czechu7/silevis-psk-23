@@ -1,5 +1,11 @@
+
+<!-- app.component.html -->
 <app-header></app-header>
-<app-home-page></app-home-page>
-<!-- <app-pdf-creator></app-pdf-creator> -->
-<!-- <app-student-form></app-student-form> -->
-<router-outlet></router-outlet>
+
+<div *ngIf="(!islogged$ && !isLoginPage())">
+    <app-home-page></app-home-page>
+  </div>
+  <!-- This content will be displayed when the user is logged in -->
+  <router-outlet></router-outlet>
+
+
