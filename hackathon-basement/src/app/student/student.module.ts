@@ -14,12 +14,16 @@ import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
+import { StudentInformationComponent } from './components/student-information/student-information.component';
+import { TableModule } from 'primeng/table';
+
 
 @NgModule({
   declarations: [
     StudentFormComponent,
     ChangeDateComponent,
     StudentDocsComponent,
+    StudentInformationComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +38,8 @@ import { TranslateModule } from '@ngx-translate/core';
     CardModule,
     DropdownModule,
     BrowserAnimationsModule,
-    TranslateModule
+    TranslateModule,
+    TableModule
     
   ],
   exports: [StudentFormComponent],
