@@ -28,5 +28,14 @@
   />
   <input id="dataod" type="text" [(ngModel)]="formData['data_od']" />
   <input id="datado" type="text" [(ngModel)]="formData['data_do']" />
-  <button (click)="generatePdf()">Generuj PDF</button>
+  <div>Current Lang: {{ translate?.currentLang }}</div>
+
+  <!-- Buttons for Polish language -->
+  <button *ngIf="translate && translate.currentLang === 'pl'" (click)="generatePdf()">Generuj PDF zalacznik 1</button>
+  <button *ngIf="translate && translate.currentLang === 'pl'" (click)="generatePdf2()">Generuj PDF zalacznik 2</button>
+
+  <!-- Buttons for English language -->
+  <button *ngIf="translate && translate.currentLang === 'en'" (click)="generatePdfENGLISH()">Generate PDF attachment 1</button>
+  <button *ngIf="translate && translate.currentLang === 'en'" (click)="generatePdf2ENGLISH()">Generate PDF attachment 2</button>
+  
 </div>
