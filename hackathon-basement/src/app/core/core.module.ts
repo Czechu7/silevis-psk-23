@@ -17,7 +17,6 @@ import { ToastModule } from 'primeng/toast';
     TranslateModule,
     MenuModule,
     ToastModule,
-
   ],
   exports: [HeaderComponent],
 })
