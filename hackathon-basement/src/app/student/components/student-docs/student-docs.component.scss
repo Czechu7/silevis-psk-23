@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+  }
+  
+  .left-column {
+    flex: 1; /* Elastyczna szerokość dla lewej kolumny */
+    padding: 10px; /* Dodatkowy odstęp */
+    margin-left:2rem;
+    text-align: left;
+    
+  }
+  
+  .right-column {
+    flex: 3; /* Elastyczna szerokość dla prawej kolumny */
+    padding: 10px; /* Dodatkowy odstęp */
+  }
+  th{
+    padding-right: 5rem;
+  }
+  
