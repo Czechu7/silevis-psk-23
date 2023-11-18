@@ -5,7 +5,7 @@ const getAllStudents = async (req, res) => {
     const students = await Student.find();
 
     if (!students) {
-      return res.status(400);
+      return res.sendStatus(400);
     }
 
     const newStudents = students.map((elem) => {
@@ -26,7 +26,7 @@ const getAllStudents = async (req, res) => {
     });
     res.json({ students: newStudents });
   } catch (error) {
-    return res.status(400);
+    return res.sendStatus(400);
   }
 };
 
@@ -47,7 +47,7 @@ const saveStudent = async (req, res) => {
   } = req.body;
 
   if (!albumNumber) {
-    return res.status(400);
+    return res.sendStatus(400);
   }
 
   try {
@@ -70,7 +70,7 @@ const saveStudent = async (req, res) => {
       res.sendStatus(400);
     }
   } catch (err) {
-    return res.status(400);
+    return res.sendStatus(400);
   }
 
   res.sendStatus(200);
@@ -80,7 +80,7 @@ const updateAccept = async (req, res) => {
   const { albumNumber, isAccept } = req.body;
 
   if (!albumNumber) {
-    return res.status(400);
+    return res.sendStatus(400);
   }
 
   try {
@@ -95,7 +95,7 @@ const updateAccept = async (req, res) => {
 
     res.sendStatus(200);
   } catch (err) {
-    return res.status(400);
+    return res.sendStatus(400);
   }
 };
 
@@ -103,7 +103,7 @@ const requestUpdateDate = async (req, res) => {
   const { albumNumber, secondDate } = req.body;
 
   if (!albumNumber) {
-    return res.status(400);
+    return res.sendStatus(400);
   }
 
   try {
@@ -118,7 +118,7 @@ const requestUpdateDate = async (req, res) => {
 
     res.sendStatus(200);
   } catch (err) {
-    return res.status(400);
+    return res.sendStatus(400);
   }
 };
 
@@ -126,7 +126,7 @@ const rejectUpdateDate = async (req, res) => {
   const { albumNumber } = req.body;
 
   if (!albumNumber) {
-    return res.status(400);
+    return res.sendStatus(400);
   }
 
   try {
@@ -141,7 +141,7 @@ const rejectUpdateDate = async (req, res) => {
 
     res.sendStatus(200);
   } catch (err) {
-    return res.status(400);
+    return res.sendStatus(400);
   }
 };
 
@@ -149,7 +149,7 @@ const changeDate = async (req, res) => {
   const { albumNumber, secondDate } = req.body;
 
   if (!albumNumber || !secondDate) {
-    return res.status(400);
+    return res.sendStatus(400);
   }
 
   try {
@@ -164,7 +164,7 @@ const changeDate = async (req, res) => {
 
     res.sendStatus(200);
   } catch (err) {
-    return res.status(400);
+    return res.sendStatus(400);
   }
 };
 
