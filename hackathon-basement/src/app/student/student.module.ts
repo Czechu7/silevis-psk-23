@@ -13,6 +13,7 @@ import { StudentDocsComponent } from './components/student-docs/student-docs.com
 import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CardModule,
     DropdownModule,
     BrowserAnimationsModule,
+    TranslateModule
+    
   ],
   exports: [StudentFormComponent],
 })
