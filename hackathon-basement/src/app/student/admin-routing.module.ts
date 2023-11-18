@@ -5,6 +5,7 @@ import { StudentFormComponent } from './components/student-form/student-form.com
 import { studentGuard } from '../guards/student.guard';
 import { PdfCreatorComponent } from './components/pdf-creator/pdf-creator.component';
 import { StudentDocsComponent } from './components/student-docs/student-docs.component';
+import { StudentPraktykiComponent } from './components/student-praktyki/student-praktyki.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,11 @@ const routes: Routes = [
   {
     path: `${RouterEnum.files}/:id`,
     component: StudentFormComponent,
+    canActivate: [studentGuard],
+  },
+  {
+    path: `${RouterEnum.docs}/praktyki`,
+    component: StudentPraktykiComponent,
     canActivate: [studentGuard],
   },
 ];

@@ -17,7 +17,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { StudentInformationComponent } from './components/student-information/student-information.component';
 import { TableModule } from 'primeng/table';
-
+import { StudentPraktykiComponent } from './components/student-praktyki/student-praktyki.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { TableModule } from 'primeng/table';
     ChangeDateComponent,
     StudentDocsComponent,
     StudentInformationComponent,
+    StudentPraktykiComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +41,7 @@ import { TableModule } from 'primeng/table';
     DropdownModule,
     BrowserAnimationsModule,
     TranslateModule,
+    TableModule,
     RadioButtonModule,
     TableModule
   ],

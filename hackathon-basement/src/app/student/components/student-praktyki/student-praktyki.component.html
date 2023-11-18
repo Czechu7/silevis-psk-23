@@ -1,0 +1,40 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <label>Numer Albumu </label>
+  <input type="text" pInputText formControlName="nrAlbumu" readonly />
+
+  <label>Imię </label>
+  <input type="text" pInputText formControlName="imie" [(ngModel)]="loggedUserData.firstName" readonly />
+
+  <label>Nazwisko </label>
+  <input type="text" pInputText formControlName="nazwisko" />
+
+  <label>E-Mail </label>
+  <input type="text" pInputText formControlName="email" />
+
+  <label>Praktyki </label>
+
+  <div class="card flex ">
+    <div class="card flex ">
+      <p-dropdown formControlName="praktyki" [options]="miesiacPraktyk" optionLabel="name"></p-dropdown>
+    </div>
+
+  </div>
+
+  <label>Termin </label>
+  <input type="text" pInputText formControlName="termin" />
+
+  <label>Firma </label>
+  <input type="text" pInputText formControlName="firma" />
+
+  <label>Adres </label>
+  <input type="text" pInputText formControlName="adres" />
+
+  <label>Numer telefonu </label>
+  <input type="text" pInputText formControlName="telKontaktowy" />
+
+
+  <button pButton pRipple [label]="'HOME.LOGIN.SUBMIT' | translate" icon="pi pi-user" class="" type="submit"></button>
+
+
+
+</form>
