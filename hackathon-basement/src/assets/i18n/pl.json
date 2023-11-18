@@ -7,6 +7,7 @@
     "HEADER.LOGIN": "Zaloguj",
     "HEADER.STUDENT": "Student",
     "HEADER.TESTS": "Pliki",
-    "HEADER.LOGOUT": "Wyloguj"
+    "HEADER.LOGOUT": "Wyloguj",
+    "HEADER.DOCS": "Dokumenty"
   }
 }
