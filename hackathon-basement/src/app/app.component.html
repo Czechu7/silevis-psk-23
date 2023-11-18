@@ -1,11 +1,10 @@
-
 <!-- app.component.html -->
 <app-header></app-header>
 
 <div *ngIf="(!islogged$ && !isLoginPage())">
-    <app-home-page></app-home-page>
-  </div>
-  <!-- This content will be displayed when the user is logged in -->
-  <router-outlet></router-outlet>
+  <app-home-page></app-home-page>
+</div>
+<!-- This content will be displayed when the user is logged in -->
+<router-outlet></router-outlet>
 
-
+<app-spinner></app-spinner>
