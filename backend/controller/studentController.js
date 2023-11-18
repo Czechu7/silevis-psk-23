@@ -50,6 +50,12 @@ const saveStudent = async (req, res) => {
     return res.sendStatus(400);
   }
 
+  const isStudentExist = await User.findOne({ albumNumber });
+
+  if (isStudentExist) {
+    return res.sendStatus(409);
+  }
+
   try {
     const student = await Student.create({
       albumNumber,
