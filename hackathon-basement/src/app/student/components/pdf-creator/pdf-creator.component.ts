@@ -37,20 +37,20 @@ export class PdfCreatorComponent implements OnInit {
 
   private createFormData() {
     this.formData = {
-      ['data_umowy']: '17.11.2023',
-      ['nazwa_dziekan']: 'Jan Kowalski',
-      ['nazwa_firmy']: 'Nazwa firmy',
+      ['data_umowy']: '18.11.2023',
+      ['nazwa_dziekan']: 'dr hab. inż. Roman Deniziak, prof. PŚk',
+      ['nazwa_firmy']: this.loggedUserData.firmName,
       ['siedziba_firmy']: 'Siedziba firmy',
-      ['ulica_firmy']: 'Ulica firmy',
+      ['ulica_firmy']: this.loggedUserData.address,
       ['firma_krs']: this.loggedUserData.KRS,
       ['firma_nip']: this.loggedUserData.NIP,
       ['firma_regon']: this.loggedUserData.regon,
       ['firma_reprez']: 'firma reprezentowana przez',
       ['nazwa_studenta']: 'Nazwa studenta',
-      ['numer_indeksu']: this.loggedUserData.indexNumber,
-      ['data_od']: 'Data od',
-      ['data_do']: 'Data do',
-      ['dzisiejsza_data']: 'Dzisiejsza data',
+      ['numer_indeksu']: '111111',
+      ['data_od']: '10.08.2023',
+      ['data_do']: '24.08.2023',
+      ['dzisiejsza_data']: '18.11.2023',
     };
   }
 
@@ -109,7 +109,7 @@ protected generatePdf(): void {
           margin: [0, 0, 0, 5],
         },
         {
-          text: `${this.formData['nazwa_firmy']} z siedzibą w ${this.formData['siedziba_firmy']} ul. ${this.formData['ulica_firmy']}`, //${this.formData['data_umowy']}
+          text: `${this.formData['nazwa_firmy']} z siedzibą w ${this.formData['ulica_firmy']} ul. ${this.formData['ulica_firmy']}`, //${this.formData['data_umowy']}
           alignment: '',
           fontSize: 10,
           bold: false,

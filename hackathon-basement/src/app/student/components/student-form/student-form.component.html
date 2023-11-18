@@ -10,49 +10,63 @@
       class="w-5"
       type="text"
       pInputText
-      placeholder="Fullname"
-      formControlName="fullName"
+      placeholder="Index Number"
+      formControlName="indexNumber"
     />
     <input
       class="w-5"
       type="text"
       pInputText
-      placeholder="Index Number"
-      formControlName="indexNumber"
+      placeholder="Year Of Study"
+      formControlName="yearOfStudy"
     />
-    <div class="card flex justify-content-left gap-5">
-      <div class="flex align-items-center">
-        <p-radioButton
-          value="stationary"
-          formControlName="type"
-          inputId="type1"
-        ></p-radioButton>
-        <label for="type1" class="ml-2">Full-time</label>
-      </div>
-
-      <div class="flex align-items-center">
-        <p-radioButton
-          value="part-time"
-          formControlName="type"
-          inputId="type2"
-        ></p-radioButton>
-        <label for="type2" class="ml-2">Part-time</label>
-      </div>
-    </div>
-    <input class="w-5" type="text" pInputText placeholder="Department" />
+    <p-dropdown
+      [options]="loggedUserData.studentProgrammes"
+      formControlName="fieldOfStudy"
+      optionLabel="programme"
+      placeholder="Select programme"
+      class="w-5"
+    ></p-dropdown>
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Address"
+      formControlName="address"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="NIP"
+      formControlName="NIP"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Regon"
+      formControlName="regon"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="KRS"
+      formControlName="KRS"
+    />
     <button
       type="submit"
       pButton
       pRipple
-      class="p-button-success submit-button w-4 m-3"
-      label="{{'HOME.FORM.SUBMIT' | translate }}"
+      label="Submit"
       class="p-button-success w-4 m-3"
     ></button>
   </form>
 
   <form
     *ngSwitchCase="1"
-    class="card flex flex-column justify-content-center align-items-center mt-5"
+    class="card flex flex-column justify-content-center align-items-center"
     [formGroup]="studentForm"
     (ngSubmit)="onSubmit()"
   >
@@ -67,27 +81,6 @@
       class="w-5"
       type="text"
       pInputText
-      placeholder="Fullname"
-      formControlName="fullName"
-    />
-    <input
-      class="w-5"
-      type="text"
-      pInputText
-      placeholder="Department"
-      formControlName="department"
-    />
-    <p-dropdown
-      [options]="loggedUserData.studentProgrammes"
-      formControlName="fieldOfStudy"
-      optionLabel="programme"
-      placeholder="Select programme"
-      class="w-5"
-    ></p-dropdown>
-    <input
-      class="w-5"
-      type="text"
-      pInputText
       placeholder="Year Of Study"
       formControlName="yearOfStudy"
     />
@@ -95,40 +88,164 @@
       class="w-5"
       type="text"
       pInputText
-      placeholder="Company Name"
-      formControlName="companyName"
+      placeholder="Field Of Study"
+      formControlName="fieldOfStudy"
     />
     <input
       class="w-5"
       type="text"
       pInputText
-      placeholder="Date From"
-      formControlName="dateFrom"
+      placeholder="Address"
+      formControlName="address"
     />
     <input
       class="w-5"
       type="text"
       pInputText
-      placeholder="Date to"
-      formControlName="dateTo"
+      placeholder="NIP"
+      formControlName="NIP"
     />
-    <div class="flex align-items-center">
-      <p-radioButton
-        value="part-time"
-        formControlName="type"
-        inputId="type2"
-      ></p-radioButton>
-      <label for="type2" class="ml-2">Part-time</label>
-    </div>
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Regon"
+      formControlName="regon"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="KRS"
+      formControlName="KRS"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="test"
+      formControlName="test"
+    />
     <button
       type="submit"
       pButton
       pRipple
-      label="{{'HOME.FORM.SUBMIT' | translate }}"
+      label="Submit"
       class="p-button-success w-4 m-3"
     ></button>
   </form>
-
+  <form
+  *ngSwitchCase="2"
+  class="card flex flex-column justify-content-center align-items-center"
+  [formGroup]="studentForm"
+  (ngSubmit)="onSubmit()"
+>
+  <input
+    class="w-5"
+    type="text"
+    pInputText
+    placeholder="Data zlozenia"
+    formControlName="datePaper"
+  />
+  <input
+    class="w-5"
+    type="text"
+    pInputText
+    placeholder="Imię i nazwisko Dziekana"
+    formControlName="deanName"
+  />
+  <input
+    class="w-5"
+    type="text"
+    pInputText
+    placeholder="Nazwa firmy"
+    formControlName="firmName"
+  />
+  <input
+    class="w-5"
+    type="text"
+    pInputText
+    placeholder="Ulica firmy"
+    formControlName="address"
+  />
+  <input
+    class="w-5"
+    type="text"
+    pInputText
+    placeholder="NIP"
+    formControlName="NIP"
+  />
+  <input
+    class="w-5"
+    type="text"
+    pInputText
+    placeholder="KRS"
+    formControlName="KRS"
+  />
+  <input
+    class="w-5"
+    type="text"
+    pInputText
+    placeholder="regon"
+    formControlName="regon"
+  />
+  <input
+  class="w-5"
+  type="text"
+  pInputText
+  placeholder="Właściciel firmy"
+  formControlName="firmCEO"
+/>
+<input
+class="w-5"
+type="text"
+pInputText
+placeholder="Imie i nazwisko studenta"
+formControlName="studentName"
+/>
+<input
+class="w-5"
+type="text"
+pInputText
+placeholder="Numer indeksu studenta"
+formControlName="indexNumber"
+/>
+<input
+class="w-5"
+type="text"
+pInputText
+placeholder="Rok studiów"
+formControlName="yearOfStudy"
+/>
+<input
+class="w-5"
+type="text"
+pInputText
+placeholder="Kierunek studiów"
+formControlName="fieldOfStudy"
+/>
+<input
+class="w-5"
+type="text"
+pInputText
+placeholder="Data odbywania praktyk od"
+formControlName="dataFrom"
+/>
+<input
+class="w-5"
+type="text"
+pInputText
+placeholder="Data odbywania praktyk do"
+formControlName="dataTo"
+/>
+  <button
+    type="submit"
+    pButton
+    pRipple
+    label="Submit"
+    class="p-button-success w-4 m-3"
+  ></button>
+</form>
   <form
     *ngSwitchDefault
     class="card flex flex-column justify-content-center align-items-center"
@@ -184,14 +301,21 @@
       placeholder="KRS"
       formControlName="KRS"
     />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="test"
+      formControlName="test"
+    />
     <button
       type="submit"
       pButton
       pRipple
-      class="p-button w-4 m-3 submit-button"
-      label="{{'HOME.FORM.SUBMIT' | translate }}"
+      label="Submit"
+      class="p-button-success w-4 m-3"
     ></button>
   </form>
 </ng-container>
 
-<app-change-date></app-change-date>
+

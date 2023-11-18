@@ -17,12 +17,12 @@ export class AuthService {
 
   login(email: string) {
     this.http.get<IUser>(`${this.url}/${email}`).subscribe((res) => {
-      if (!res) {
-        return;
+      if (res) {
+        this.loggedUserData$.next(res);
+        this.loggedUser$.next(true);
+        this.router.navigateByUrl('/docs-dashboard');
       }
-      this.loggedUser$.next(true);
-      this.loggedUserData$.next(res);
-      this.router.navigateByUrl('/docs-dashboard');
     });
   }
+  
 }

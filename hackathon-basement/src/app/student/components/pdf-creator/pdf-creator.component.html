@@ -7,7 +7,7 @@
   <input pInputText placeholder="{{'HOME.CREATE.PLACE' | translate }}" id="dataUmowy" type="text" [(ngModel)]="formData['data_umowy']" />
   <input pInputText placeholder="{{'HOME.CREATE.PLACE1' | translate }}" id="nazwaDziekan" type="text" [(ngModel)]="formData['nazwa_dziekan']" />
   <input pInputText placeholder="{{'HOME.CREATE.PLACE2' | translate }}" id="nazwaFirmy" type="text" [(ngModel)]="formData['nazwa_firmy']" />
-  <input pInputText placeholder="{{'HOME.CREATE.PLACE3' | translate }}" id="siedzibaFirmy" type="text" [(ngModel)]="formData['siedziba_firmy']" />
+  <input pInputText placeholder="{{'HOME.CREATE.PLACE3' | translate }}" id="ulicaFirmy" type="text" [(ngModel)]="formData['ulica_firmy']" />
   <input pInputText placeholder="{{'HOME.CREATE.PLACE4' | translate }}" type="text" [(ngModel)]="formData['firma_krs']" />
   <input pInputText placeholder="{{'HOME.CREATE.PLACE5' | translate }}" type="text" [(ngModel)]="formData['firma_nip']" />
   <input pInputText placeholder="{{'HOME.CREATE.PLACE6' | translate }}" type="text" [(ngModel)]="formData['firma_regon']" />
@@ -16,7 +16,7 @@
   <input pInputText placeholder="{{'HOME.CREATE.PLACE9' | translate }}" id="ulnumerindeksuicaFirmy" type="text" [(ngModel)]="formData['numer_indeksu']" />
   <input pInputText placeholder="{{'HOME.CREATE.PLACE10' | translate }}" id="dataod" type="text" [(ngModel)]="formData['data_od']" />
   <input pInputText placeholder="{{'HOME.CREATE.PLACE11' | translate }}" id="datado" type="text" [(ngModel)]="formData['data_do']" />
-  <div>Current Lang: {{ translate?.currentLang }}</div>
+
 
   <!-- Buttons for Polish language -->
   <button *ngIf="translate && translate.currentLang === 'pl'" (click)="generatePdf()">Generuj PDF zalacznik 1</button>

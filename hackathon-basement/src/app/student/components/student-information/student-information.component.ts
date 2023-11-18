@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from 'src/app/shared/interfaces/IUser.model';
 import { AuthService } from 'src/app/auth/services/auth.service';
+import { TableModule } from 'primeng/table';
+
 
 
 @Component({
@@ -11,6 +13,8 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 export class StudentInformationComponent implements OnInit {
 
   loggedUserData: IUser;
+products: any[];
+cols: any[]|undefined;
 
   constructor(
     private authService: AuthService
