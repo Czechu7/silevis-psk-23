@@ -32,6 +32,7 @@
     "STUDENT.LASTNAME":"Last name",
     "STUDENT.STUDENTNUMBER":"Index number",
     "STUDENT.EMAIL":"E-mail address",
-    "STUDENT.STUDENTSTATTUS":"Student status"
+    "STUDENT.STUDENTSTATTUS":"Student status",
+    "FORM.SUBMIT":"Submit"
   }
 }
