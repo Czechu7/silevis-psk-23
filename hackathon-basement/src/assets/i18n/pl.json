@@ -27,7 +27,12 @@
     "HOME.ZALICZENIE":"Student w terminie do 8.09.2023 r. zgłasza się osobiście do opiekuna praktyk ze strony Uczelni celem zaliczenia praktyki. Student zobowiązany jest dostarczyć: opcjonalnie indeks (wpisany rok akademicki, nazwa i adres zakładu pracy, czas trwania praktyki w tygodniach) – wpis na oznaczonych, końcowych stronach indeksu, Sprawozdanie z praktyki studenckiej – załącznik nr 3 poświadczone przez zakładowego opiekuna praktyk (podpis i pieczęć). Sprawozdanie z praktyki powinno stanowić szczegółowy opis prac wykonanych przez praktykanta podczas całego okresu praktyki. Sprawozdanie powinno zawierać: charakterystykę zakładu pracy, szczegółowy opis przebiegu praktyki, podsumowanie praktyki (zdobyta wiedza, umiejętności, uwagi i wnioski). Zaliczenia praktyki zawodowej dokonuje w indeksie Opiekun praktyk studenckich na podstawie wymienionych wyżej dokumentów oraz rozmowy ze studentem o przebiegu praktyki i realizacji jej celu. Sprawozdanie z praktyki oraz Umowa zamieszczone zostają w aktach osobowych studenta. W przypadku posiadanego doświadczenia zawodowego (umowa o pracę / umowa o dzieło / umowa zlecenie / własna działalność) zgodnego z kierunkiem studiów i wypełniającego wymagane efekty uczenia się (karta przedmiotu) można złożyć podanie o zaliczenie praktyk wraz z odpowiednią dokumentacją poświadczającą przepracowanie 160h (kserokopie potwierdzone w Dziekanacie).",
     "HOME.ZASADYTYT":"Zasady i program odbywania praktyk studenckich na Wydziale Elektrotechniki, Automatyki i Informatyki Politechniki Świętokrzyskiej dla studiów o profilu akademickim",
     "HOME.TERMINYTYT":"Terminy i czas trwania praktyki",
-    "HOME.ZALICZENIETYT":"Zaliczenie praktyki"
+    "HOME.ZALICZENIETYT":"Zaliczenie praktyki",
+    "STUDENT.FIRSTNAME":"Imię",
+    "STUDENT.LASTNAME":"Nazwisko",
+    "STUDENT.STUDENTNUMBER":"Numer indeksu",
+    "STUDENT.EMAIL":"Adres E-mail",
+    "STUDENT.STUDENTSTATTUS":"Status studenta"
     
   }
 }
