@@ -1,4 +1,4 @@
-<app-student-information></app-student-information>
+
 <ng-container [ngSwitch]="docId | async">
   <form
     *ngSwitchCase="0"
@@ -59,7 +59,7 @@
       type="submit"
       pButton
       pRipple
-      label="Submit"
+      label="{{'HOME.FORM.SUBMIT' | translate }}"
       class="p-button-success w-4 m-3"
     ></button>
   </form>
@@ -130,7 +130,7 @@
       type="submit"
       pButton
       pRipple
-      label="Submit"
+      label="{{'HOME.FORM.SUBMIT' | translate }}"
       class="p-button-success w-4 m-3"
     ></button>
   </form>
@@ -201,7 +201,7 @@
       type="submit"
       pButton
       pRipple
-      label="Submit"
+      label="{{'HOME.FORM.SUBMIT' | translate }}"
       class="p-button-success w-4 m-3"
     ></button>
   </form>
