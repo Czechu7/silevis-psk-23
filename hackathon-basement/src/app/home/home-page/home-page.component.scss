@@ -3,15 +3,26 @@
     margin-bottom: 1.5rem;
     margin-left: 5rem;
     margin-right: 5rem;
-    border: 2px solid gray;
+    //border: 2px solid gray;
     border-radius: 0rem 0 0 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(121, 111, 111, 0.384);
+    //background-color: rgba(121, 111, 111, 0.384);
   }
+img{
 
+  max-width: 360px;
+  height:180px
+}
 
+p-card{
+margin-left: 2rem;
+
+}
+.card{
+  border-radius: 15px;
+}
   .text {
     padding: 20px;
     text-align: center;
