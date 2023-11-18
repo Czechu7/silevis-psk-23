@@ -1,32 +1,32 @@
 <table *ngIf="loggedUserData" class="table">
-    <tbody>
-      <tr>
-        <th>{{ 'HOME.STUDENT.FIRSTNAME' | translate }}</th>
-        <td>{{ loggedUserData.firstName }}</td>
-      </tr>
-      <tr>
-        <th>{{ 'HOME.STUDENT.LASTNAME' | translate }}</th>
-        <td>{{ loggedUserData.lastName }}</td>
-      </tr>
-      <tr>
-        <th>{{ 'HOME.STUDENT.STUDENTNUMBER' | translate }}</th>
-        <td>{{ loggedUserData.studentNumber }}</td>
-      </tr>
-      <tr>
-        <th>{{ 'HOME.STUDENT.EMAIL' | translate }}</th>
-        <td>{{ loggedUserData.email }}</td>
-      </tr>
-      <tr>
-        <th>{{ 'HOME.STUDENT.STUDENTSTATTUS' | translate }}</th>
-        <td>
-          {{ 
+  <tbody>
+    <tr>
+      <th>{{ 'HOME.STUDENT.FIRSTNAME' | translate }}</th>
+      <td>{{ loggedUserData.firstName }}</td>
+    </tr>
+    <tr>
+      <th>{{ 'HOME.STUDENT.LASTNAME' | translate }}</th>
+      <td>{{ loggedUserData.lastName }}</td>
+    </tr>
+    <tr>
+      <th>{{ 'HOME.STUDENT.STUDENTNUMBER' | translate }}</th>
+      <td>{{ loggedUserData.studentNumber }}</td>
+    </tr>
+    <tr>
+      <th>{{ 'HOME.STUDENT.EMAIL' | translate }}</th>
+      <td>{{ loggedUserData.email }}</td>
+    </tr>
+    <tr>
+      <th>{{ 'HOME.STUDENT.STUDENTSTATTUS' | translate }}</th>
+      <td>
+        {{ 
             loggedUserData.studentStatus === 0 ? 'Nie jest studentem' :
             loggedUserData.studentStatus === 1 ? 'Nie studiuje obecnie' :
             loggedUserData.studentStatus === 2 ? 'Studiuje' :
             'Nieznany status'
           }}
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  
+      </td>
+    </tr>
+    <a [routerLink]="['/docs-dashboard/praktyki']">Przejdź do praktyk</a>
+  </tbody>
+</table>

@@ -38,8 +38,6 @@ const saveStudent = async (req, res) => {
     email,
     internship,
     firstDate,
-    // secondDate,
-    // changeDateRequest,
     company,
     adress,
     phoneNumber,
@@ -50,7 +48,7 @@ const saveStudent = async (req, res) => {
     return res.sendStatus(400);
   }
 
-  const isStudentExist = await User.findOne({ albumNumber });
+  const isStudentExist = await Student.findOne({ albumNumber });
 
   if (isStudentExist) {
     return res.sendStatus(409);
