@@ -19,15 +19,15 @@
 <div class ='login'>
 <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
   <div class="text-center mb-5">
-      <img src="assets/logo-psk.png" alt="Image" height="50" class="mb-3">
-      <div class="text-900 text-3xl font-medium mb-3">Welcome Back</div>
-      <span class="text-600 font-medium line-height-3">Don't have an account?</span>
-      <a class="font-medium no-underline ml-2 text-blue-500 cursor-pointer">Create today!</a>
+      <img src="assets/logo_psk2.png" alt="Image" height="100" class="mb-3">
+      <div class="text-900 text-3xl font-medium mb-3">{{'HOME.LOGIN.WELCOME' | translate }}</div>
+      <span class="text-600 font-medium line-height-3">{{'HOME.LOGIN.ACCOUNT' | translate }}</span>
+      <a class="font-medium no-underline ml-2 text-blue-500 cursor-pointer">{{'HOME.LOGIN.CREATE' | translate }}</a>
   </div>
   <form [formGroup]="form" action="" class="login__form" (ngSubmit)="handleLogin()">
   <div>
       <label for="email1" class="block text-900 font-medium mb-2">Email</label>
-      <input id="email1" type="text" placeholder="Username" pInputText class="w-full mb-3" formControlName="email">
+      <input id="email1" type="text" [placeholder]="'HOME.LOGIN.USERNAME' | translate" pInputText class="w-full mb-3" formControlName="email">
 
 
       <div class="flex align-items-center justify-content-between mb-6">
@@ -35,10 +35,10 @@
               <p-checkbox id="rememberme1" [binary]="true" styleClass="mr-2"></p-checkbox>
               <label for="rememberme1" class="text-900">{{'HOME.LOGIN.REMEMBER' | translate }}</label>
           </div>
-          <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Forgot password?</a>
+          <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">{{'HOME.LOGIN.FORGOT' | translate }}</a>
       </div>
 
-      <button pButton pRipple label="Sign In" icon="pi pi-user" class="w-full" [disabled]="form.invalid" type="submit" label="Submit"></button>
+      <button pButton pRipple [label]="'HOME.LOGIN.SUBMIT' | translate" icon="pi pi-user" class="w-full" [disabled]="form.invalid" type="submit"></button>
   </div>
   <p *ngIf="controls.email.invalid && (controls.email.dirty || controls.email.touched)">
     {{getErrorMessage(controls.email)}}</p>

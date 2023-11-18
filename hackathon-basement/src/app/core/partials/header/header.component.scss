@@ -3,7 +3,8 @@ header{
     position: relative;
     background: #FFEDD5;
     padding: none;
-    height: 4rem;
+    height: 6rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 .language-selector-container{
     display: flex;
@@ -23,7 +24,7 @@ margin-bottom:1rem;
 }
 
 .flag-icon {
-    width: 3rem; 
+    width: 4rem; 
     margin-right: 10px; 
     text-align: center;
   }
@@ -40,7 +41,7 @@ li a{
     width:6rem;
 }
 .img-responsive{
-    height:4rem;
+    height:6rem;
     padding: 0px;
     margin: 0;
 
@@ -62,12 +63,17 @@ a.logo{
    
 }
 ul{
+    height: 98%;
     display: flex;
     list-style-type: none;
     margin: 0;
 }
 ul a{
-    padding: 1.4rem;
+    
+    
+    padding: 25%;
+    text-align: center;
+    height: 100%;
     display: inline-block;
 }
 a span{
@@ -75,7 +81,7 @@ a span{
     color: white;
     padding: 0;
 border-radius: 100rem;
-font-size:  0.9rem;
+font-size:  1rem;
 }
 
 .menu-container{
