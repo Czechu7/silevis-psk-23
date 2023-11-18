@@ -11,6 +11,7 @@ import { PdfCreatorComponent } from './student/components/pdf-creator/pdf-creato
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
+import { AdminModule } from './admin/admin.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -33,7 +34,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     FormsModule,
     StudentModule,
-    HomeModule
+    HomeModule,
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

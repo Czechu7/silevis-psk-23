@@ -8,6 +8,7 @@
     "HEADER.STUDENT": "Student",
     "HEADER.TESTS": "Files",
     "HEADER.LOGOUT1": "Logout",
+    "HEADER.TABLE": "Table",
     "HEADER.DOCS": "Documents",
     "LOGIN.REMEMBER": "Remember me",
     "LOGIN.WELCOME": "Welcome Back",
@@ -27,6 +28,25 @@
     "HOME.ZALICZENIE":"The student reports in person to the University's internship supervisor by September 8, 2023 in order to pass the internship. The student is obliged to provide: optionally an index (entered academic year, name and address of the workplace, duration of internship in weeks) - entry on the marked end pages of the index, Student internship report - Annex No. 3, certified by the company internship supervisor (signature and stamp). The internship report should be a detailed description of the work performed by the intern during the entire internship period. The report should include : characteristics of the workplace, detailed description of the course of the internship, summary of the internship (acquired knowledge, skills, comments and conclusions). Credit for the professional internship is made in the student's index book by the student internship supervisor on the basis of the documents mentioned above and a conversation with the student about the course of the internship and the achievement of its goal. Report from the internship and the Agreement are placed in the student's personal file. If you have professional experience (employment contract / contract for specific work / contract of mandate / own business) consistent with the field of study and meeting the required learning outcomes (subject card), you can submit an application for credit for the internship together with appropriate documentation confirming 160 hours of work (confirmed photocopies in the Dean's Office).",
     "HOME.ZASADYTYT":"Rules and program of student internships at the Faculty of Electrical Engineering, Automatics and Computer Science of the Kielce University of Technology for studies with an academic profile",
     "HOME.TERMINYTYT":"Dates and duration of the internship",
-    "HOME.ZALICZENIETYT":"Passing the internship"
+    "HOME.ZALICZENIETYT":"Passing the internship",
+    "STUDENT.FIRSTNAME":"First name",
+    "STUDENT.LASTNAME":"Last name",
+    "STUDENT.STUDENTNUMBER":"Index number",
+    "STUDENT.EMAIL":"E-mail address",
+    "STUDENT.STUDENTSTATTUS":"Student status",
+    "FORM.SUBMIT":"Submit",
+    "CREATE.PLACE":"Agreement date",
+     "CREATE.PLACE1":"Dean's Name",
+     "CREATE.PLACE2":"Company Name",
+     "CREATE.PLACE3":"Company Headquarters",
+     "CREATE.PLACE4":"Krs",
+     "CREATE.PLACE5":"Nip",
+     "CREATE.PLACE6":"Regon",
+     "CREATE.PLACE7":"Company Representative",
+     "CREATE.PLACE8":"Student Name",
+     "CREATE.PLACE9":"Index Number",
+     "CREATE.PLACE10":"Date from",
+     "CREATE.PLACE11":"Date to"
+
   }
 }
