@@ -3,7 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StudentFormService } from '../../service/student-form.service';
 import { StudentDocsService } from '../../service/student-docs.service';
-import { BehaviorSubject } from 'rxjs';
+import {
+  BehaviorSubject,
+  Observable,
+  catchError,
+  debounceTime,
+  of,
+  switchMap,
+} from 'rxjs';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { IUser } from 'src/app/shared/interfaces/IUser.model';
 
@@ -33,6 +40,7 @@ export class StudentFormComponent implements OnInit {
         console.warn('no user found');
       }
     });
+    this.checkNIPValue();
   }
 
   private initializeForm(userData: IUser) {
@@ -74,6 +82,33 @@ export class StudentFormComponent implements OnInit {
           });
       }
     });
+  }
+
+  checkNIPValue() {
+    this.studentForm
+      .get('NIP')
+      ?.valueChanges.pipe(
+        debounceTime(1500),
+        switchMap((value) =>
+          this.studentFormService.getCompanyInfo(value).pipe(
+            catchError((error) => {
+              console.error('There was an error!', error);
+              return of(null);
+            })
+          )
+        )
+      )
+      .subscribe((res) => {
+        if (res) {
+          this.studentForm.patchValue({
+            regon: res.result.subject.regon,
+            KRS: res.result.subject.krs,
+            address: res.result.subject.workingAddress,
+          });
+        } else {
+          console.error('No valid response received');
+        }
+      });
   }
 
   protected onSubmit() {
