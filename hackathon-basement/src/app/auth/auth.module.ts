@@ -10,6 +10,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -21,7 +22,8 @@ import { TranslateModule } from '@ngx-translate/core';
     RadioButtonModule,
     ReactiveFormsModule,
     ButtonModule,
-    TranslateModule
+    TranslateModule,
+    SharedModule,
   ],
 })
 export class AuthModule {}
