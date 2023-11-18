@@ -33,6 +33,18 @@
     "STUDENT.STUDENTNUMBER":"Index number",
     "STUDENT.EMAIL":"E-mail address",
     "STUDENT.STUDENTSTATTUS":"Student status",
-    "FORM.SUBMIT":"Submit"
+    "FORM.SUBMIT":"Submit",
+    "CREATE.PLACE":"Agreement date",
+     "CREATE.PLACE1":"Dean's Name",
+     "CREATE.PLACE2":"Company Name",
+     "CREATE.PLACE3":"Company Headquarters",
+     "CREATE.PLACE4":"Krs",
+     "CREATE.PLACE5":"Nip",
+     "CREATE.PLACE6":"Regon",
+     "CREATE.PLACE7":"Company Representative",
+     "CREATE.PLACE8":"Student Name",
+     "CREATE.PLACE9":"Index Number",
+     "CREATE.PLACE10":"Date from",
+     "CREATE.PLACE11":"Date to"
   }
 }
