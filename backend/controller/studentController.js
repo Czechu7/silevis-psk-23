@@ -11,11 +11,13 @@ const getAllStudents = async (req, res) => {
     const newStudents = students.map((elem) => {
       return {
         albumNumber: elem.albumNumber,
-        firstname: elem.firstname,
-        lastname: elem.lastname,
+        firstName: elem.firstName,
+        lastName: elem.lastName,
         email: elem.email,
         internship: elem.internship,
-        date: elem.date,
+        firstDate: elem.firstDate,
+        secondDate: elem.secondDate,
+        changeDateRequest: elem.changeDateRequest,
         company: elem.company,
         adress: elem.adress,
         phoneNumber: elem.phoneNumber,
@@ -31,11 +33,13 @@ const getAllStudents = async (req, res) => {
 const saveStudent = async (req, res) => {
   const {
     albumNumber,
-    firstname,
-    lastname,
+    firstName,
+    lastName,
     email,
     internship,
-    date,
+    firstDate,
+    // secondDate,
+    // changeDateRequest,
     company,
     adress,
     phoneNumber,
@@ -49,11 +53,13 @@ const saveStudent = async (req, res) => {
   try {
     const student = await Student.create({
       albumNumber,
-      firstname,
-      lastname,
+      firstName,
+      lastName,
       email,
       internship,
-      date,
+      firstDate,
+      secondDate: null,
+      changeDateRequest: false,
       company,
       adress,
       phoneNumber,
@@ -80,7 +86,7 @@ const updateAccept = async (req, res) => {
   try {
     const updatedStudent = await Student.updateOne(
       { albumNumber },
-      { isAccept: true }
+      { isAccept }
     );
 
     if (!updatedStudent) {
@@ -92,15 +98,19 @@ const updateAccept = async (req, res) => {
     return res.status(400);
   }
 };
-const changeDate = async (req, res) => {
-  const { albumNumber, date } = req.body;
 
-  if (!albumNumber || !date) {
+const requestUpdateDate = async (req, res) => {
+  const { albumNumber, secondDate } = req.body;
+
+  if (!albumNumber) {
     return res.status(400);
   }
 
   try {
-    const updatedStudent = await Student.updateOne({ albumNumber }, { date });
+    const updatedStudent = await Student.updateOne(
+      { albumNumber },
+      { changeDateRequest: true, secondDate }
+    );
 
     if (!updatedStudent) {
       res.sendStatus(400);
@@ -112,5 +122,57 @@ const changeDate = async (req, res) => {
   }
 };
 
-module.exports = { getAllStudents, saveStudent, updateAccept, changeDate };
+const rejectUpdateDate = async (req, res) => {
+  const { albumNumber } = req.body;
 
+  if (!albumNumber) {
+    return res.status(400);
+  }
+
+  try {
+    const updatedStudent = await Student.updateOne(
+      { albumNumber },
+      { changeDateRequest: false, secondDate: null }
+    );
+
+    if (!updatedStudent) {
+      res.sendStatus(400);
+    }
+
+    res.sendStatus(200);
+  } catch (err) {
+    return res.status(400);
+  }
+};
+
+const changeDate = async (req, res) => {
+  const { albumNumber, secondDate } = req.body;
+
+  if (!albumNumber || !secondDate) {
+    return res.status(400);
+  }
+
+  try {
+    const updatedStudent = await Student.updateOne(
+      { albumNumber },
+      { firstDate: secondDate, changeDateRequest: false, secondDate: null }
+    );
+
+    if (!updatedStudent) {
+      res.sendStatus(400);
+    }
+
+    res.sendStatus(200);
+  } catch (err) {
+    return res.status(400);
+  }
+};
+
+module.exports = {
+  getAllStudents,
+  saveStudent,
+  updateAccept,
+  changeDate,
+  rejectUpdateDate,
+  requestUpdateDate,
+};
