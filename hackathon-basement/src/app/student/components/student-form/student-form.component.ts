@@ -49,25 +49,24 @@ export class StudentFormComponent implements OnInit {
       switch (res) {
         case 0:
           this.studentForm = this.formBuilder.group({
-            indexNumber: [userData.studentNumber, Validators.required],
-            yearOfStudy: ['', Validators.required],
+            fullName: ['', Validators.required],
             fieldOfStudy: ['', Validators.required],
-            address: ['', Validators.required],
-            NIP: ['', Validators.required],
-            regon: ['', Validators.required],
-            KRS: ['', Validators.required],
+            indexNumber: [userData.studentNumber, Validators.required],
+            type: ['', Validators.required],
+            department: ['', Validators.required],
           });
           break;
         case 1:
           this.studentForm = this.formBuilder.group({
             indexNumber: ['', Validators.required],
-            yearOfStudy: ['', Validators.required],
+            fullName: ['', Validators.required],
+            department: ['', Validators.required],
             fieldOfStudy: ['', Validators.required],
-            address: ['', Validators.required],
-            NIP: ['', Validators.required],
-            regon: ['', Validators.required],
-            KRS: ['', Validators.required],
-            test: ['', Validators.required],
+            yearOfStudy: ['', Validators.required],
+            companyName: ['', Validators.required],
+            dateFrom: ['', Validators.required],
+            dateTo: ['', Validators.required],
+            type: ['', Validators.required],
           });
           break;
         default:
@@ -112,6 +111,7 @@ export class StudentFormComponent implements OnInit {
   }
 
   protected onSubmit() {
+    console.log(this.studentForm);
     this.studentFormService.handleSubmit(this.studentForm.value);
   }
 }
