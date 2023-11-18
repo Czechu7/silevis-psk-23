@@ -33,7 +33,21 @@
     "STUDENT.STUDENTNUMBER":"Numer indeksu",
     "STUDENT.EMAIL":"Adres E-mail",
     "STUDENT.STUDENTSTATTUS":"Status studenta",
-    "FORM.SUBMIT":"Wykonaj"
+    "FORM.SUBMIT":"Wykonaj",
+    "CREATE.PLACE":"Data umowy",
+    "CREATE.PLACE1":"Nazwa Dziekana",
+    "CREATE.PLACE2":"Nazwa firmy",
+    "CREATE.PLACE3":"Siedziba Firmy",
+    "CREATE.PLACE4":"Krs",
+    "CREATE.PLACE5":"Nip",
+    "CREATE.PLACE6":"Regon",
+    "CREATE.PLACE7":"Repezentant Firmy",
+    "CREATE.PLACE8":"Nazwa Studenta",
+    "CREATE.PLACE9":"Numer Indeksu",
+    "CREATE.PLACE10":"Data od",
+    "CREATE.PLACE11":"Data do"
+   
+    
     
   }
 }
