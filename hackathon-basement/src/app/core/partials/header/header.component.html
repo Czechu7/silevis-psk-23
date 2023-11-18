@@ -1,26 +1,32 @@
 <header>
-    <div class="container">
-      <a routerLink="/" class="logo">Politechnika Świętokrzyska</a>
-      <nav>
-        <ul>
-          <li>
-            <select #langSelect (change)="changeLanguage(langSelect.value)">
-              <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">
-                {{ lang }}
-              </option>
-            </select>
-          </li>
-          <li><a routerLink="/login">{{ 'HOME.HEADER.LOGIN' | translate }}</a></li>
-          <li class="menu-container">
-            <a routerLink="/student">{{ 'HOME.HEADER.STUDENT' | translate }}</a>
-            <div class="menu">
-              <a routerLink="/login">{{ 'HOME.HEADER.LOGIN' | translate }}</a>
-              <a routerLink="/tests">{{ 'HOME.HEADER.TESTS' | translate }}</a>
-              <a>{{ 'HOME.HEADER.LOGOUT' | translate }}</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
+  <div class="container">
+    <a routerLink="/" class="logo">
+      <img class="img-responsive" src="assets/logo-psk.png" alt="Politechnika Świętokrzyska">
+    </a>
+    <nav>
+      <ul>
+        <div class="language-selector-container">
+          <select class="lang" #langSelect (change)="changeLanguage(langSelect.value)">
+            <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">
+              <img *ngIf="lang === 'en'" src="assets/flag_en.png" alt="English Flag" class="flag-icon" />
+              <img *ngIf="lang === 'pl'" src="assets/flag_pl.png" alt="Polish Flag" class="flag-icon" />
+              {{ lang }}
+            </option>
+          </select>
+          <img [src]="selectedImage" alt="Language Flag" class="selected-flag-icon" />
+        </div>
+        
+        <li><a routerLink="/login">{{ 'HOME.HEADER.LOGIN' | translate }}</a></li>
+        <li class="menu-container">
+          <a routerLink="/student">{{ 'HOME.HEADER.STUDENT' | translate }}</a>
+          <div class="menu">
+            <a routerLink="/login">{{ 'HOME.HEADER.LOGIN' | translate }}</a>
+            <a routerLink="/tests">{{ 'HOME.HEADER.TESTS' | translate }}</a>
+            <a>{{ 'MENU.HEADER.LOGOUT' | translate }}</a>
+          </div>
+        </li>
+      
+      </ul>
+    </nav>
+  </div>
+</header>
