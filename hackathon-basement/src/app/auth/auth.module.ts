@@ -9,6 +9,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -20,6 +21,7 @@ import { ButtonModule } from 'primeng/button';
     RadioButtonModule,
     ReactiveFormsModule,
     ButtonModule,
+    TranslateModule
   ],
 })
 export class AuthModule {}
