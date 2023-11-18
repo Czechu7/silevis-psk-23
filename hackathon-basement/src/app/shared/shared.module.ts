@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { AlertComponent } from './alert/alert.component';
+import { MessagesModule } from 'primeng/messages';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [AlertComponent],
+  imports: [CommonModule, MessagesModule],
+  exports: [AlertComponent],
 })
-export class SharedModule { }
+export class SharedModule {}
