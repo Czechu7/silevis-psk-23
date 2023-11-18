@@ -69,6 +69,24 @@ export class StudentFormComponent implements OnInit {
             type: ['', Validators.required],
           });
           break;
+          case 2:
+            this.studentForm = this.formBuilder.group({
+              datePaper: ['', Validators.required],
+              deanName: ['', Validators.required],
+              firmName: ['', Validators.required],
+              address: ['', Validators.required],
+              NIP: ['', Validators.required],
+              KRS: ['', Validators.required],
+              regon: ['', Validators.required],
+              firmCEO: ['', Validators.required],
+              studentName: ['', Validators.required],
+              studentIndex: ['', Validators.required],
+              dataFrom: ['', Validators.required],
+              dataTo: ['', Validators.required],
+              yearOfStudy: ['', Validators.required],
+              fieldOfStudy: ['', Validators.required],
+            });
+            break;
         default:
           this.studentForm = this.formBuilder.group({
             indexNumber: ['', Validators.required],
@@ -100,9 +118,11 @@ export class StudentFormComponent implements OnInit {
       .subscribe((res) => {
         if (res) {
           this.studentForm.patchValue({
+            
             regon: res.result.subject.regon,
             KRS: res.result.subject.krs,
             address: res.result.subject.workingAddress,
+            firmName: res.result.subject.name,
           });
         } else {
           console.error('No valid response received');

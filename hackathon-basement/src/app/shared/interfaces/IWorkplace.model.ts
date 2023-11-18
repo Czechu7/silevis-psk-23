@@ -3,4 +3,5 @@ export interface IWorkplace {
   NIP: string;
   regon: string;
   KRS: string;
+  firmName: string;
 }
