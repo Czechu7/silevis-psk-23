@@ -14,6 +14,7 @@ import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
+import { RadioButtonModule } from 'primeng/radiobutton';
 import { StudentInformationComponent } from './components/student-information/student-information.component';
 import { TableModule } from 'primeng/table';
 import { StudentPraktykiComponent } from './components/student-praktyki/student-praktyki.component';
@@ -41,6 +42,8 @@ import { StudentPraktykiComponent } from './components/student-praktyki/student-
     BrowserAnimationsModule,
     TranslateModule,
     TableModule,
+    RadioButtonModule,
+    TableModule
   ],
   exports: [StudentFormComponent],
 })

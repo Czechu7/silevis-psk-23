@@ -35,6 +35,7 @@
     "STUDENT.EMAIL":"E-mail address",
     "STUDENT.STUDENTSTATTUS":"Student status",
     "FORM.SUBMIT":"Submit",
+    "CREATE.PLACE0":"Contract date",
     "CREATE.PLACE":"Agreement date",
      "CREATE.PLACE1":"Dean's Name",
      "CREATE.PLACE2":"Company Name",

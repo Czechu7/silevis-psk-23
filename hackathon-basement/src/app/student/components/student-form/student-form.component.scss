@@ -1,6 +1,16 @@
+
+input {
+  margin: 5px;
+}
+
+::ng-deep {
+  .submit-button .p-button.p-highlight {
+    background: #ffbb77;
+    background-color: #ffbb77;
+  }
+}
+
 input{
     margin: 5px;
 }
-button{
-    background-color: #EF7A1B;
-}
+
