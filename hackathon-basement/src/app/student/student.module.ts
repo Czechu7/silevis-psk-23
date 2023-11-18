@@ -14,6 +14,7 @@ import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,8 @@ import { TranslateModule } from '@ngx-translate/core';
     CardModule,
     DropdownModule,
     BrowserAnimationsModule,
-    TranslateModule
-    
+    TranslateModule,
+    RadioButtonModule,
   ],
   exports: [StudentFormComponent],
 })

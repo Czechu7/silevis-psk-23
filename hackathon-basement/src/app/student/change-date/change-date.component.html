@@ -1,15 +1,34 @@
-<h3>Chcę zmienić termin praktyk</h3>
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<div class="card flex flex-column justify-content-center">
+  <h3>Chcę zmienić termin praktyk</h3>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="changeDate">chcę zmienić datę praktyk</label>
+    <input
+      type="checkbox"
+      name="changeDate"
+      id="changeDate"
+      formControlName="changeDate"
+    />
+    <div *ngIf="controls.changeDate.value">
+      <p>Podaj datę początkową i końcocwą praktyk:</p>
+      <input
+        type="date"
+        name="startDate"
+        id="startDate"
+        formControlName="startDate"
+      />
+      <input
+        type="date"
+        name="endDate"
+        id="endDate"
+        formControlName="endDate"
+      />
 
-  <!-- <p-triStateCheckbox class="p-tristatecheckbox-label" formControlName="changeDate" inputId="tricheckbox">
-  </p-triStateCheckbox> -->
-  <label for="changeDate">chcę zmienić datę praktyk</label>
-  <input type="checkbox" name="changeDate" id="changeDate" formControlName="changeDate">
-  <div *ngIf="controls.changeDate.value">
-    <p>Podaj datę początkową i końcocwą praktyk:</p>
-    <input type="date" name="startDate" id="startDate" formControlName="startDate">
-    <input type="date" name="endDate" id="endDate" formControlName="endDate">
-
-    <p-button class="login__button" [disabled]="form.invalid" type="submit" label="Złóż wniosek"></p-button>
-  </div>
-</form>
+      <p-button
+        class="login__button"
+        [disabled]="form.invalid"
+        type="submit"
+        label="Złóż wniosek"
+      ></p-button>
+    </div>
+  </form>
+</div>

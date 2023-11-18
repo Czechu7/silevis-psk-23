@@ -1,3 +1,10 @@
-input{
-    margin: 5px;
+input {
+  margin: 5px;
+}
+
+::ng-deep {
+  .submit-button .p-button.p-highlight {
+    background: #ffbb77;
+    background-color: #ffbb77;
+  }
 }
