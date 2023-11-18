@@ -14,6 +14,18 @@ header{
 select.lang{
     margin: 0;
 }
+.language-selector-container select.lang {
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0); 
+    border: 1px solid #ccc; 
+    padding: 5px;
+    border-color: rgba(255, 255, 255, 0);
+  }
+  
+  .language-selector-container option {
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5); 
+  }
 
 .lang{
     
@@ -36,6 +48,7 @@ margin-bottom:1rem;
   }
 
 li a{
+    border-radius: 15px 0 15px;
     color: red;
     background-color: #FFBB77;
     width:6rem;
@@ -84,20 +97,69 @@ border-radius: 100rem;
 font-size:  1rem;
 }
 
-.menu-container{
-    position: relative;
+
+.menu a{
+    
+    margin-bottom: 1rem;
+    width: 100%;
+    min-width: 4rem;
 }
 
-.menu{
-position: absolute;
-z-index: 1;
-background: whitesmoke;
-display: none;
-}
-.menu-container:hover .menu{
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .menu-container {
+    position: relative;
+  }
+  
+  .menu {
+    border-radius: 15px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-left: -125%; /* Przesunięcie w lewo o 10px, dostosuj według potrzeb */
+  }
+  
+  
+  .menu-container:hover .menu {
     display: block;
-}
-.menu a{
-    width: 100%;
-    min-width: 8rem;
-}
+  }
+  
+  .language-selector-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .selected-flag-icon {
+    margin-left: 10px;
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+  }
+  
+  .flag-icon {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    margin-right: 5px;
+  }
+  

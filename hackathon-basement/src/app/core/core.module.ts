@@ -5,7 +5,8 @@ import { BadgeModule } from 'primeng/badge';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './partials/header/header.component';
 import { TranslateModule } from '@ngx-translate/core'; // Import TranslateModule
-
+import { MenuModule } from 'primeng/menu';
+import { ToastModule } from 'primeng/toast';
 @NgModule({
   declarations: [HeaderComponent],
   imports: [
@@ -14,6 +15,9 @@ import { TranslateModule } from '@ngx-translate/core'; // Import TranslateModule
     BadgeModule,
     HttpClientModule,
     TranslateModule,
+    MenuModule,
+    ToastModule,
+
   ],
   exports: [HeaderComponent],
 })
