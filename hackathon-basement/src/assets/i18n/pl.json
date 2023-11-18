@@ -8,6 +8,7 @@
     "HEADER.STUDENT": "Student",
     "HEADER.TESTS": "Pliki",
     "HEADER.LOGOUT": "Wyloguj",
+    "HEADER.DOCS": "Dokumenty"
     "LOGIN.REMEMBER": "Zapamiętaj mnie",
     "LOGIN.WELCOME": "Witaj ponownie",
     "LOGIN.ACCOUNT": "Nie masz konta?",
@@ -27,6 +28,5 @@
     "HOME.ZASADYTYT":"Zasady i program odbywania praktyk studenckich na Wydziale Elektrotechniki, Automatyki i Informatyki Politechniki Świętokrzyskiej dla studiów o profilu akademickim",
     "HOME.TERMINYTYT":"Terminy i czas trwania praktyki",
     "HOME.ZALICZENIETYT":"Zaliczenie praktyki"
-  
   }
 }

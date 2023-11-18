@@ -1,12 +1,209 @@
-<form class="card flex flex-column justify-content-center align-items-center" [formGroup]="studentForm"
-  (ngSubmit)="onSubmit()">
-  <input class="w-5" type="text" pInputText placeholder="Index Number" formControlName="indexNumber" />
-  <input class="w-5" type="text" pInputText placeholder="Year Of Study" formControlName="yearOfStudy" />
-  <input class="w-5" type="text" pInputText placeholder="Field Of Study" formControlName="fieldOfStudy" />
-  <input class="w-5" type="text" pInputText placeholder="Address" formControlName="address" />
-  <input class="w-5" type="text" pInputText placeholder="NIP" formControlName="NIP" />
-  <input class="w-5" type="text" pInputText placeholder="Regon" formControlName="regon" />
-  <input class="w-5" type="text" pInputText placeholder="KRS" formControlName="KRS" />
-  <button type="submit" pButton pRipple label="Submit" class="p-button-success w-4 m-3"></button>
-</form>
+<ng-container [ngSwitch]="docId | async">
+  <form
+    *ngSwitchCase="0"
+    class="card flex flex-column justify-content-center align-items-center mt-5"
+    [formGroup]="studentForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Index Number"
+      formControlName="indexNumber"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Year Of Study"
+      formControlName="yearOfStudy"
+    />
+    <p-dropdown
+      [options]="loggedUserData.studentProgrammes"
+      formControlName="fieldOfStudy"
+      optionLabel="programme"
+      placeholder="Select programme"
+      class="w-5"
+    ></p-dropdown>
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Address"
+      formControlName="address"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="NIP"
+      formControlName="NIP"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Regon"
+      formControlName="regon"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="KRS"
+      formControlName="KRS"
+    />
+    <button
+      type="submit"
+      pButton
+      pRipple
+      label="Submit"
+      class="p-button-success w-4 m-3"
+    ></button>
+  </form>
+
+  <form
+    *ngSwitchCase="1"
+    class="card flex flex-column justify-content-center align-items-center"
+    [formGroup]="studentForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Index Number"
+      formControlName="indexNumber"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Year Of Study"
+      formControlName="yearOfStudy"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Field Of Study"
+      formControlName="fieldOfStudy"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Address"
+      formControlName="address"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="NIP"
+      formControlName="NIP"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Regon"
+      formControlName="regon"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="KRS"
+      formControlName="KRS"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="test"
+      formControlName="test"
+    />
+    <button
+      type="submit"
+      pButton
+      pRipple
+      label="Submit"
+      class="p-button-success w-4 m-3"
+    ></button>
+  </form>
+
+  <form
+    *ngSwitchDefault
+    class="card flex flex-column justify-content-center align-items-center"
+    [formGroup]="studentForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Index Number"
+      formControlName="indexNumber"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Year Of Study"
+      formControlName="yearOfStudy"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Field Of Study"
+      formControlName="fieldOfStudy"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Address"
+      formControlName="address"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="NIP"
+      formControlName="NIP"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="Regon"
+      formControlName="regon"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="KRS"
+      formControlName="KRS"
+    />
+    <input
+      class="w-5"
+      type="text"
+      pInputText
+      placeholder="test"
+      formControlName="test"
+    />
+    <button
+      type="submit"
+      pButton
+      pRipple
+      label="Submit"
+      class="p-button-success w-4 m-3"
+    ></button>
+  </form>
+</ng-container>
+
 <app-change-date></app-change-date>

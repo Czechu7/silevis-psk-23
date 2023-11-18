@@ -9,6 +9,7 @@ import { IUser } from '../../shared/interfaces/IUser.model';
 })
 export class AuthService {
   loggedUser$ = new BehaviorSubject<boolean>(false);
+  loggedUserData$ = new BehaviorSubject<IUser | null>(null);
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -17,8 +18,10 @@ export class AuthService {
   login(email: string) {
     this.http.get<IUser>(`${this.url}/${email}`).subscribe((res) => {
       if (res) {
+        console.log(res);
         this.loggedUser$.next(true);
-        this.router.navigateByUrl('/student');
+        this.loggedUserData$.next(res);
+        this.router.navigateByUrl('/docs-dashboard');
       }
     });
   }

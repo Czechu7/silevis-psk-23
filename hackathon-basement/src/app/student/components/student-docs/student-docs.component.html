@@ -1,0 +1,8 @@
+<div
+  class="card flex justify-content-center"
+  *ngFor="let document of documents"
+  (click)="openDocument(document.id)"
+>
+  <p-card class="w-8 m-5" [header]="document.name"> </p-card>
+</div>
+<router-outlet></router-outlet>

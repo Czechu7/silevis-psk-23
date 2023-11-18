@@ -8,6 +8,7 @@
     "HEADER.STUDENT": "Student",
     "HEADER.TESTS": "Files",
     "HEADER.LOGOUT": "Logout",
+    "HEADER.DOCS": "Documents"
     "LOGIN.REMEMBER": "Remember me",
     "LOGIN.WELCOME": "Welcome Back",
     "LOGIN.ACCOUNT": "Don't have an account?",
@@ -27,8 +28,5 @@
     "HOME.ZASADYTYT":"Rules and program of student internships at the Faculty of Electrical Engineering, Automatics and Computer Science of the Kielce University of Technology for studies with an academic profile",
     "HOME.TERMINYTYT":"Dates and duration of the internship",
     "HOME.ZALICZENIETYT":"Passing the internship"
-  
-  
-  
   }
 }
