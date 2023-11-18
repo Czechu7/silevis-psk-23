@@ -4,8 +4,7 @@
   align-items: center;
   flex-direction: column;
   margin-top: 3rem;
-  &__title {
-  }
+  
   &__form {
     display: flex;
     justify-content: center;
@@ -18,4 +17,7 @@
   &__button {
     margin-top: 10px;
   }
+  button{
+  background-color: #EF7A1B;
+}
 }
