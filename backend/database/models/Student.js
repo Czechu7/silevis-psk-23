@@ -2,11 +2,13 @@ const mongoose = require("mongoose");
 
 const StudentSchema = new mongoose.Schema({
   albumNumber: String,
-  firstname: String,
-  lastname: String,
+  firstName: String,
+  lastName: String,
   email: String,
   internship: String,
-  date: String,
+  firstDate: String,
+  secondDate: String,
+  changeDateRequest: { type: Boolean, default: false },
   company: String,
   adress: String,
   phoneNumber: Number,
