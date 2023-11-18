@@ -7,7 +7,8 @@
       <ul>
         <div class="language-selector-container">
           <select class="lang" #langSelect (change)="changeLanguage(langSelect.value)">
-            <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">
+            <option *ngFor="let lang of translate.getLangs()" [value]="lang"
+              [selected]="lang === translate.currentLang">
               <img *ngIf="lang === 'en'" src="assets/flag_en.png" alt="English Flag" class="flag-icon" />
               <img *ngIf="lang === 'pl'" src="assets/flag_pl.png" alt="Polish Flag" class="flag-icon" />
               {{ lang }}
@@ -15,18 +16,19 @@
           </select>
           <img [src]="selectedImage" alt="Language Flag" class="selected-flag-icon" />
         </div>
-        
+
         <li><a routerLink="/login">{{ 'HOME.HEADER.LOGIN' | translate }}</a></li>
         <li class="menu-container">
           <a routerLink="/student">{{ 'HOME.HEADER.STUDENT' | translate }}</a>
           <div class="menu">
             <a routerLink="/login">{{ 'HOME.HEADER.LOGIN' | translate }}</a>
+            <a routerLink="/table">{{ 'HOME.HEADER.TABLE' | translate }}</a>
             <a routerLink="/file">{{ 'HOME.HEADER.TESTS' | translate }}</a>
             <a routerLink="/docs-dashboard">{{ 'HOME.HEADER.DOCS' | translate }}</a>
             <a routerLink="/logout">{{ 'HOME.HEADER.LOGOUT1' | translate }}</a>
           </div>
         </li>
-      
+
       </ul>
     </nav>
   </div>

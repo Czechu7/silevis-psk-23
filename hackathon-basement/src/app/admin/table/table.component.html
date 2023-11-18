@@ -1,0 +1,36 @@
+<table class="student-table">
+  <thead>
+    <tr>
+      <th>Album Number</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Internship</th>
+      <th>First Date</th>
+      <th>Second Date</th>
+      <th>Change Date Request</th>
+      <th>Company</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Is Accepted</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.albumNumber }}</td>
+      <td>{{ student.firstName }}</td>
+      <td>{{ student.lastName }}</td>
+      <td>{{ student.email }}</td>
+      <td>{{ student.internship }}</td>
+      <td>{{ student.firstDate }}</td>
+      <td>{{ student.secondDate }}</td>
+      <td>{{ student.changeDateRequest ? 'Yes' : 'No' }}</td>
+      <td>{{ student.company }}</td>
+      <td>{{ student.adress }}</td>
+      <td>{{ student.phoneNumber }}</td>
+      <td>
+        <input type="checkbox" [checked]="student.isAccept" (change)="updateIsAccepted($event, student.albumNumber)">
+      </td>
+    </tr>
+  </tbody>
+</table>

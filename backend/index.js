@@ -1,6 +1,7 @@
 const connectDB = require("./database/connectDB.js");
 
 const express = require("express");
+const cors = require("cors");
 const path = require("path");
 
 const studentRoutes = require("./routes/studentRoutes.js");
@@ -8,6 +9,7 @@ const studentRoutes = require("./routes/studentRoutes.js");
 const app = express();
 app.use(express.json());
 app.set("x-powered-by", false);
+app.use(cors());
 
 app.use("/student", studentRoutes);
 

@@ -8,6 +8,7 @@
     "HEADER.STUDENT": "Student",
     "HEADER.TESTS": "Files",
     "HEADER.LOGOUT1": "Logout",
+    "HEADER.TABLE": "Table",
     "HEADER.DOCS": "Documents",
     "LOGIN.REMEMBER": "Remember me",
     "LOGIN.WELCOME": "Welcome Back",
@@ -46,5 +47,6 @@
      "CREATE.PLACE9":"Index Number",
      "CREATE.PLACE10":"Date from",
      "CREATE.PLACE11":"Date to"
+
   }
 }
